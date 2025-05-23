@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'measurements',
-    'variables',
-    'dj_cqrs',
+    'analisis',
+    'doctors',
+    'dj_cqrs'
 ]
 
 MIDDLEWARE = [
@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'monitoring.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'replica-db',
-        'USER': 'replica-user',
+        'NAME': 'master-db',
+        'USER': 'master-user',
         'PASSWORD': 'isis2503',
-        'HOST': '<replica-db-ip>',
+        'HOST': '<master-db-ip>',
         'PORT': 5432,
     }
 }
@@ -142,5 +142,4 @@ CQRS = {
     'port': 5672,
     'user': 'monitoring-app',
     'password': 'isis2503',
-    'queue': 'monitoring_replica',  # settings used only in replica
 }

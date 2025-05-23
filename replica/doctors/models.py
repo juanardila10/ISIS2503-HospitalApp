@@ -1,8 +1,9 @@
 from django.db import models
-from dj_cqrs.mixins import ReplicaMixin
+from dj_cqrs.mixins import MasterMixin
 
-class Variable(ReplicaMixin, models.Model):
-    CQRS_ID = 'variable_model'
+class Doctor(MasterMixin, models.Model):
+
+    CQRS_ID = 'doctor_model'
 
     name = models.CharField(max_length=50)
 

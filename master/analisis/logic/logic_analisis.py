@@ -1,4 +1,4 @@
-from doctor.models import Doctor
+from doctors.models import Doctor
 from ..models import Analisis
 
 def create_analisis(form):
