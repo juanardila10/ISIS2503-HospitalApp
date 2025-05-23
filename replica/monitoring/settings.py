@@ -142,4 +142,5 @@ CQRS = {
     'port': 5672,
     'user': 'monitoring-app',
     'password': 'isis2503',
+    'queue': 'monitoring_replica',
 }
