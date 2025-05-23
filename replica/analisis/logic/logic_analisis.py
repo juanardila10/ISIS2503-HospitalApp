@@ -1,6 +1,11 @@
 from doctors.models import Doctor
 from ..models import Analisis
 
+def get_analisis():
+    queryset = Analisis.objects.all()
+    return queryset
+
+
 def create_analisis(form):
     doctor = None
     try:
